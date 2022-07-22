@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\MainController;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[MainController::class,'index']);
 
-
+//Route::get('/test',[MainController::class,'php']);
 //Route::get('/news',[MainController::class,'news']);
 
