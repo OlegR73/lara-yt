@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('users_id','author_id');
+            $table->text('description')->nullable();
+            $table->uuid('filename');
             $table->timestamps();
         });
     }
