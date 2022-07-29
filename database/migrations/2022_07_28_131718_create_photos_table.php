@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->uuid()->index();
             $table->foreignIdFor(Post::class,'post_id');
+            //$table->foreignId('post_id')->constrained();
         });
     }
 

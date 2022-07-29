@@ -16,8 +16,8 @@ return new class extends Migration
     {
         Schema::create('user_information', function (Blueprint $table) {
             $table->id();
-           // $table->foreignIdFor(User::class,'user_id');
-            $table->foreignId('users_id')->constrained();
+            $table->foreignIdFor(User::class,'user_id');
+            //$table->foreignId('users_id')->constrained();
             $table->string('name')->nullable();
             $table->text('bio')->nullable();
             $table->timestamp('birthday');
