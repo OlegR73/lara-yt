@@ -15,14 +15,17 @@ class MainController extends Controller
         return view('welcome',compact('query'));
     }
 
-    // public function php(Request $request){
-    //     dd($request);
-    //     //return view('index');
-    // }
-    // public function news(Request $request)
-    // {
-    //     return view('news');
-    // }
+    
+    public function news()
+    {
+        return view('news');
+    }
+    public function post(Request $request)
+    {
+        $query = $request->all();
+        return view('post',compact('query'));
+        //return view('post');
+    }
 
    
 }

@@ -29,7 +29,7 @@
             
             <li>{{$key.' - '.$value}}</li>
             @empty
-                <h3>Query is empty</h3> 
+                <h3>Query is empty.</h3> 
              
         @endforelse
 

@@ -36,6 +36,6 @@
                 </div>
             @endif
 
-        <h1>INDEX 1</h1>    
+        <h1>NEWS</h1>    
     </body>
 </html>

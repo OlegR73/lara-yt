@@ -26,6 +26,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[MainController::class,'index']);
 
-//Route::get('/test',[MainController::class,'php']);
-//Route::get('/news',[MainController::class,'news']);
+
+//Route::get('/test',[MainController::class,'test']);
+Route::get('/news',[MainController::class,'news']);
+Route::get('/post',[MainController::class,'post']);
 
