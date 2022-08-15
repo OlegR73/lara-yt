@@ -12,7 +12,7 @@
     <h1>{{env('APP_NAME')}}</h1>
 
  <ul>  
-    @empty($query)
+    {{-- @empty($query)
         <h3>Query is empty</h3>
     @else
            Query is not empty
@@ -22,19 +22,27 @@
 
         @endforeach
  
-    @endif  
+    @endif   --}}
 </ul> 
  <ul>         
-        @forelse ($query as $key => $value )
+        {{-- @forelse ($query as $key => $value )
             
             <li>{{$key.' - '.$value}}</li>
             @empty
                 <h3>Query is empty.</h3> 
              
-        @endforelse
+        @endforelse --}}
 
 </ul> 
+<form action= "{{ route('register') }}" method="POST">
+  @csrf
+  <input type="text" name="username" placeholder="Username">
+  <input type="text" name="name" placeholder="Name">
+  <input type="date" name="birthday" placeholder="Birthday">
+  <input type="password" name="password" placeholder="Password">
+  <button type="submit">Submit</button>
 
+</form>
 </body>
     
 </html>

@@ -24,7 +24,9 @@ use Illuminate\Support\Facades\Route;
 //     return view('index');
 // });
 
-Route::get('/',[MainController::class,'index']);
+Route::get('/',[MainController::class,'index'])->name('home');
+Route::post('/register',[MainController::class,'register'])->name('register');
+//Route::get('/welcome',[MainController::class,'news']);
 
 
 //Route::get('/test',[MainController::class,'test']);

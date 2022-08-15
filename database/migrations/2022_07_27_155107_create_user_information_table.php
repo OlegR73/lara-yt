@@ -15,12 +15,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('user_information', function (Blueprint $table) {
-            $table->id();
+            $table->id(); 
             $table->foreignIdFor(User::class,'user_id');
             //$table->foreignId('users_id')->constrained();
             $table->string('name')->nullable();
             $table->text('bio')->nullable();
-            $table->timestamp('birthday');
+            $table->timestamp('birthday')->nullable();
             $table->ipAddress('ip_address')->nullable();
             $table->timestamps();
         });
